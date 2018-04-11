@@ -32,7 +32,7 @@ class DmozSpider(BaseSpider):
             self.log("Login failed", level=log.ERROR)
             return
         else
-            self.log("Login Success", level=log.INFO)
+            self.log("Login Success ", level=log.INFO)
             return Request(query, callback=self.page_parse)
 
     def page_parse(self, response):
