@@ -29,7 +29,7 @@ class DmozSpider(BaseSpider):
 
     def after_login(self, response):
         if "authentication failed" in response.body:
-            self.log("Login failed", level=log.ERROR)
+            self.log("FB Login failed", level=log.ERROR)
             return
         else
             self.log("Login Success ", level=log.INFO)
